@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 448" role="img" aria-labelledby="title description">
-<title id="title">game 1: white to move</title>
-<desc id="description">rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1</desc>
+<title id="title">game 1: black to move</title>
+<desc id="description">rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1</desc>
 <rect width="448" height="448" fill="#f7f7f0"/>
 <text x="49" y="63" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♜</text>
 <rect x="74" y="24" width="50" height="50" fill="#0d01ff" opacity=".13"/>
@@ -44,6 +44,8 @@
 <text x="199" y="441" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">d</text>
 <rect x="74" y="224" width="50" height="50" fill="#0d01ff" opacity=".13"/>
 <rect x="174" y="224" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="226" y="226" width="46" height="46" fill="none" stroke="#0d01ff" stroke-width="1.5"/>
+<text x="249" y="263" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
 <rect x="274" y="224" width="50" height="50" fill="#0d01ff" opacity=".13"/>
 <rect x="374" y="224" width="50" height="50" fill="#0d01ff" opacity=".13"/>
 <text x="12" y="255" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">4</text>
@@ -60,7 +62,7 @@
 <text x="149" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
 <rect x="174" y="324" width="50" height="50" fill="#0d01ff" opacity=".13"/>
 <text x="199" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
-<text x="249" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
+<rect x="226" y="326" width="46" height="46" fill="none" stroke="#0d01ff" stroke-width="1.5"/>
 <rect x="274" y="324" width="50" height="50" fill="#0d01ff" opacity=".13"/>
 <text x="299" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
 <text x="349" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>

@@ -1,8 +1,13 @@
 {
   "schemaVersion": 1,
   "game": 1,
-  "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-  "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n *",
-  "lastMove": null,
-  "requests": []
+  "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+  "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 *",
+  "lastMove": "e4",
+  "requests": [
+    {
+      "id": 5456793239,
+      "title": "chess:364141907ae5ca96d8fc51e08633e21309567b767921ba6b416e221cfbcb18b3:e2e4"
+    }
+  ]
 }
