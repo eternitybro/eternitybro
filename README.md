@@ -6,7 +6,7 @@ i lead [clear](https://clearsol.network/).
 
 ## your move
 
-<a href="https://github.com/eternitybro/eternitybro/blob/main/assets/chess-board.stl"><img src="assets/chess-board.png?scene=blue&amp;position=53ebc0f172d8ad002001d18bf526559a3e054260acb4dc176179c00d425f1fc0" width="960" alt="3D Man Ray-inspired chess set. game 1: white to move. Click to rotate the set."></a>
+<a href="https://github.com/eternitybro/eternitybro/blob/main/assets/chess-board.stl"><img src="https://raw.githubusercontent.com/eternitybro/eternitybro/main/assets/chess-board.png?scene=blue&amp;position=53ebc0f172d8ad002001d18bf526559a3e054260acb4dc176179c00d425f1fc0" width="960" alt="3D Man Ray-inspired chess set. game 1: white to move. Click to rotate the set."></a>
 
 [rotate the set](https://github.com/eternitybro/eternitybro/blob/main/assets/chess-board.stl) · drag to rotate. scroll to zoom.
 

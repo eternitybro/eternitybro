@@ -26,7 +26,7 @@ test('starts with the standard board and all 20 legal opening moves', () => {
   const e4 = markdown.match(/\[e4\]\(([^)]+)\)/)[1];
   assert.match(new URL(e4).searchParams.get('body'), /^Play e4 in the shared game\./);
   assert.match(markdown, /assets\/chess-board\.png/);
-  assert.ok(markdown.includes(`chess-board.png?scene=blue&amp;position=${fingerprint(state)}`));
+  assert.ok(markdown.includes(`https://raw.githubusercontent.com/eternitybro/eternitybro/main/assets/chess-board.png?scene=blue&amp;position=${fingerprint(state)}`));
   assert.match(markdown, /width="960"/);
 });
 
