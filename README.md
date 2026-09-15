@@ -18,6 +18,12 @@ An interactive research application that brings together on-chain data collectio
 **Next.js · TypeScript · Python**  
 [Explore the application](https://tempo-stablecoin-infrastructure-aud.vercel.app/) · [Inspect the indexing work](https://github.com/robebots/tempo-stablecoin-infrastructure-audit/commit/1a65691c119e135028d7984dd580c7d13f67a308)
 
+### [Clarity](https://github.com/robebots/clarity)
+Developer tooling from robebots for testing Solana wallet flows through the browser. It connects repeatable wallet behavior with transaction checks, React examples, and Playwright tests.
+
+**TypeScript · React · Playwright**  
+[Run from source](https://github.com/robebots/clarity#run-from-source) · [Read the testing approach](https://github.com/robebots/clarity/blob/main/tests/e2e/next-proof.spec.ts)
+
 ### [kb](https://github.com/robebots/kb)
 An agent workflow for turning source documents into a linked Markdown knowledge base with cited answers. I organized the workflow around portable files, source provenance, and a small set of commands.
 
@@ -38,5 +44,7 @@ A frontend template for connecting a wallet, entering a deposit, and following a
 ## In the workshop
 
 I build tools with AI agents under [robebots](https://github.com/robebots). [eternitybrot](https://github.com/eternitybrot) is the automation account. Project histories preserve collaborator and agent credit.
+
+**Latest update, September 14, 2026:** [Verified Clarity's setup instructions](https://github.com/robebots/clarity/pull/1) against a fresh install, build, and browser tests.
 
 Outside software, I've made music, fragrances, and a coffee shop. [More about me](https://www.robgungor.com/).
