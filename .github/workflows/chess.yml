@@ -2,7 +2,7 @@ name: Community chess
 
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened]
   workflow_dispatch:
 
 permissions:
@@ -47,8 +47,10 @@ jobs:
       - name: Install the 3D renderer
         if: github.event_name == 'workflow_dispatch' || steps.move.outputs.accepted == 'true'
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends blender
+          curl --fail --location --retry 3 --output "$RUNNER_TEMP/blender.tar.xz" https://download.blender.org/release/Blender4.0/blender-4.0.2-linux-x64.tar.xz
+          printf '%s  %s\n' '5583a5588736da8858c522ef17fff5d73be59c47a6fe91ad29c6f3263e22086a' "$RUNNER_TEMP/blender.tar.xz" | sha256sum --check
+          tar -xf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP"
+          echo "BLENDER_EXECUTABLE=$RUNNER_TEMP/blender-4.0.2-linux-x64/blender" >> "$GITHUB_ENV"
       - name: Render the live position in 3D
         if: github.event_name == 'workflow_dispatch' || steps.move.outputs.accepted == 'true'
         run: node scripts/render-3d.mjs

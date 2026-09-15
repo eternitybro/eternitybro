@@ -8,7 +8,7 @@ i love to make things that humans enjoy. i lead [clear](https://clearsol.network
 
 <a href="https://github.com/eternitybro/eternitybro/blob/main/assets/chess-board.stl"><img src="assets/chess-board.png?position=fc91b293d002d220707cc34b519b0639624f5e4f2b52309fe3d9e0009a97fd8e" width="960" alt="3D Man Ray-inspired chess set. game 1: black to move. Click to rotate the set."></a>
 
-[rotate the set](https://github.com/eternitybro/eternitybro/blob/main/assets/chess-board.stl)
+[rotate the set](https://github.com/eternitybro/eternitybro/blob/main/assets/chess-board.stl) · drag to rotate. scroll to zoom.
 
 **black to move.** game 1. last move: e4.
 
