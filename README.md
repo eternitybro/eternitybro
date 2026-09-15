@@ -1,12 +1,12 @@
-<a href="https://www.robgungor.com/"><img src="assets/header.svg" width="960" alt="Rob Gungor. make yourself at home." /></a>
+i lead [clear](https://clearsol.network/).
 
-i love to make things that humans enjoy. i lead [clear](https://clearsol.network/).
+[ask "me" anything](https://www.robgungor.com/?from=github#ama)
 
 <!-- CHESS:START -->
 
 ## your move
 
-<a href="https://github.com/eternitybro/eternitybro/blob/main/assets/chess-board.stl"><img src="assets/chess-board.png?position=53ebc0f172d8ad002001d18bf526559a3e054260acb4dc176179c00d425f1fc0" width="960" alt="3D Man Ray-inspired chess set. game 1: white to move. Click to rotate the set."></a>
+<a href="https://github.com/eternitybro/eternitybro/blob/main/assets/chess-board.stl"><img src="assets/chess-board.png?scene=blue&amp;position=53ebc0f172d8ad002001d18bf526559a3e054260acb4dc176179c00d425f1fc0" width="960" alt="3D Man Ray-inspired chess set. game 1: white to move. Click to rotate the set."></a>
 
 [rotate the set](https://github.com/eternitybro/eternitybro/blob/main/assets/chess-board.stl) · drag to rotate. scroll to zoom.
 
@@ -34,4 +34,4 @@ Choose a move below, then submit the issue. The board updates after GitHub runs 
 
 <!-- CHESS:END -->
 
-<sub>set inspired by [Man Ray's 1920 design](https://www.metmuseum.org/art/collection/search/480922). shared chess inspired by [Tim Burgan](https://github.com/timburgan). [come say hi](https://www.robgungor.com/).</sub>
+<sub>set inspired by [Man Ray's 1920 design](https://www.metmuseum.org/art/collection/search/480922). shared chess inspired by [Tim Burgan](https://github.com/timburgan).</sub>

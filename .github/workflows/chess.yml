@@ -58,9 +58,9 @@ jobs:
         run: |
           git add README.md assets/chess-board.png assets/chess-board.stl game/state.json
           if ! git diff --cached --quiet; then
-            git config user.name 'Billi'
-            git config user.email 'billi@robebot.app'
-            git commit -m 'Update the community chessboard' -m 'Co-Authored-By: Billi <billi@robebot.app>'
+            git config user.name 'Rob Gungor'
+            git config user.email 'rob@robgungor.com'
+            git commit -m 'Update the community chessboard'
             git push origin HEAD:main
           fi
       - name: Close the move request

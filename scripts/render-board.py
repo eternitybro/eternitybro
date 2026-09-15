@@ -20,7 +20,6 @@ import bpy
 from mathutils import Vector
 
 
-CREAM = "f7f7f0"
 BLUE = "0d01ff"
 BOARD_TOP = 0.24
 
@@ -281,6 +280,7 @@ def scene_setup(pieces, samples):
     scene.render.image_settings.color_mode = "RGB"
     scene.render.image_settings.color_depth = "8"
     scene.render.image_settings.compression = 70
+    scene.render.dither_intensity = 0
     scene.render.film_transparent = True
     scene.view_settings.view_transform = "Standard"
     scene.view_settings.look = "None"
@@ -298,7 +298,7 @@ def scene_setup(pieces, samples):
     square_blue = material("Pale blue squares", "cbd3eb", .44)
     rim = material("Cream board edge", "e5e3d7", .40)
     lettering = material("Blue coordinates", "526092", .55)
-    floor = material("Cream studio floor", CREAM, .7)
+    floor = material("Electric blue studio floor", BLUE, .7)
 
     box("Thin board plinth", (0, 0, .11), (8.52, 8.52, .22), rim, bevel=.055)
     for file in range(8):
@@ -330,18 +330,34 @@ def scene_setup(pieces, samples):
     data.ortho_scale = 14.0
     scene.camera = camera
 
-    # Composite studio shadows over the exact #f7f7f0 profile cream.
-    # Shadowed pixels vary naturally while the base color stays fixed.
+    # Composite studio shadows over the exact #0d01ff profile blue.
     scene.use_nodes = True
     nodes = scene.node_tree.nodes
     nodes.clear()
     layers = nodes.new("CompositorNodeRLayers")
     background = nodes.new("CompositorNodeAlphaOver")
     background.inputs[0].default_value = 1
-    background.inputs[1].default_value = linear(CREAM)
+    background.inputs[1].default_value = linear(BLUE)
     scene.node_tree.links.new(layers.outputs["Image"], background.inputs[2])
+
+    # Let studio shadows fade before the image boundary so the outer pixels
+    # stay exactly blue. The full board sits inside the unfaded region.
+    border = nodes.new("CompositorNodeBoxMask")
+    border.width = .97
+    # Box-mask dimensions are normalized to image width, including height.
+    border.height = .958 * scene.render.resolution_y / scene.render.resolution_x
+    feather = nodes.new("CompositorNodeBlur")
+    feather.filter_type = "GAUSS"
+    feather.size_x = 10
+    feather.size_y = 10
+    scene.node_tree.links.new(border.outputs["Mask"], feather.inputs["Image"])
+    backdrop = nodes.new("CompositorNodeMixRGB")
+    backdrop.blend_type = "MIX"
+    backdrop.inputs[1].default_value = linear(BLUE)
+    scene.node_tree.links.new(feather.outputs["Image"], backdrop.inputs[0])
+    scene.node_tree.links.new(background.outputs["Image"], backdrop.inputs[2])
     output = nodes.new("CompositorNodeComposite")
-    scene.node_tree.links.new(background.outputs["Image"], output.inputs["Image"])
+    scene.node_tree.links.new(backdrop.outputs["Image"], output.inputs["Image"])
     return scene
 
 

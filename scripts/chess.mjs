@@ -97,7 +97,7 @@ export function renderSection(state, { repo }) {
     return url.href;
   };
   const modelUrl = `https://github.com/${repo}/blob/main/assets/chess-board.stl`;
-  const lines = ['## your move', '', `<a href="${modelUrl}"><img src="assets/chess-board.png?position=${position}" width="960" alt="3D Man Ray-inspired chess set. game ${state.game}: ${xml(status(chess))}. Click to rotate the set."></a>`, '',
+  const lines = ['## your move', '', `<a href="${modelUrl}"><img src="assets/chess-board.png?scene=blue&amp;position=${position}" width="960" alt="3D Man Ray-inspired chess set. game ${state.game}: ${xml(status(chess))}. Click to rotate the set."></a>`, '',
     `[rotate the set](${modelUrl}) · drag to rotate. scroll to zoom.`, '',
     `**${status(chess)}.** game ${state.game}${state.lastMove ? `. last move: ${state.lastMove}` : ''}.`, ''];
   if (chess.isGameOver()) {
