@@ -6,10 +6,6 @@ import { Chess } from 'chess.js';
 
 const START = '<!-- CHESS:START -->';
 const END = '<!-- CHESS:END -->';
-const BLUE = '#0d01ff';
-const CREAM = '#f7f7f0';
-const PIECES = { w: { k: '♔', q: '♕', r: '♖', b: '♗', n: '♘', p: '♙' },
-  b: { k: '♚', q: '♛', r: '♜', b: '♝', n: '♞', p: '♟' } };
 const NAMES = { p: 'pawn', n: 'knight', b: 'bishop', r: 'rook', q: 'queen', k: 'king' };
 
 function snapshot(chess, game, requests = []) {
@@ -83,32 +79,6 @@ function status(chess) {
 const xml = (value) => String(value).replace(/[&<>"']/g, (character) =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' })[character]);
 
-export function renderBoard(state) {
-  const chess = load(state);
-  const last = chess.history({ verbose: true }).at(-1);
-  const parts = [`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 448" role="img" aria-labelledby="title description">`,
-    `<title id="title">game ${state.game}: ${xml(status(chess))}</title>`,
-    `<desc id="description">${xml(state.fen)}</desc>`,
-    `<rect width="448" height="448" fill="${CREAM}"/>`];
-  for (let row = 0; row < 8; row++) {
-    for (let column = 0; column < 8; column++) {
-      const square = `${String.fromCharCode(97 + column)}${8 - row}`;
-      const x = 24 + column * 50;
-      const y = 24 + row * 50;
-      const piece = chess.get(square);
-      if ((row + column) % 2) parts.push(`<rect x="${x}" y="${y}" width="50" height="50" fill="${BLUE}" opacity=".13"/>`);
-      if (last && [last.from, last.to].includes(square)) {
-        parts.push(`<rect x="${x + 2}" y="${y + 2}" width="46" height="46" fill="none" stroke="${BLUE}" stroke-width="1.5"/>`);
-      }
-      if (piece) parts.push(`<text x="${x + 25}" y="${y + 39}" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="${BLUE}">${PIECES[piece.color][piece.type]}</text>`);
-    }
-    parts.push(`<text x="12" y="${55 + row * 50}" text-anchor="middle" font-family="sans-serif" font-size="11" fill="${BLUE}">${8 - row}</text>`);
-    parts.push(`<text x="${49 + row * 50}" y="441" text-anchor="middle" font-family="sans-serif" font-size="11" fill="${BLUE}">${String.fromCharCode(97 + row)}</text>`);
-  }
-  parts.push(`<rect x="24" y="24" width="400" height="400" fill="none" stroke="${BLUE}" stroke-width="1"/>`, '</svg>');
-  return parts.join('\n') + '\n';
-}
-
 function validateRepo(repo) {
   if (typeof repo !== 'string' || !/^[a-z0-9][a-z0-9_.-]*\/[a-z0-9][a-z0-9_.-]*$/i.test(repo)) {
     throw new Error('Provide a GitHub repository as owner/name');
@@ -126,7 +96,9 @@ export function renderSection(state, { repo }) {
     url.searchParams.set('body', `${action}\n\nSubmit this issue to play. Closed as Completed means your move was played. Closed as Not planned means it was not played, usually because the board changed.\n\nRefresh [the profile](https://github.com/${repo.split('/')[0]}) to choose a current move.`);
     return url.href;
   };
-  const lines = ['## your move', '', `<img src="assets/chess-board.svg" width="420" alt="game ${state.game}: ${xml(status(chess))}">`, '',
+  const modelUrl = `https://github.com/${repo}/blob/main/assets/chess-board.stl`;
+  const lines = ['## your move', '', `<a href="${modelUrl}"><img src="assets/chess-board.png?position=${position}" width="960" alt="3D Man Ray-inspired chess set. game ${state.game}: ${xml(status(chess))}. Click to rotate the set."></a>`, '',
+    `[rotate the set](${modelUrl})`, '',
     `**${status(chess)}.** game ${state.game}${state.lastMove ? `. last move: ${state.lastMove}` : ''}.`, ''];
   if (chess.isGameOver()) {
     lines.push(`[start a new game](${link('new')})`);
@@ -155,7 +127,8 @@ function updateSection(readme, section) {
 
 async function writeFiles(files) {
   // Stage every complete file before replacing any. The workflow commits all
-  // three together, so a failed run cannot publish a partial board update.
+  // the state and README with the separately rendered PNG, so a failed run
+  // cannot publish a partial board update.
   const staged = [];
   try {
     for (const [path, content] of files) {
@@ -184,7 +157,7 @@ async function main() {
   load(state);
   if (command === 'render') {
     const section = renderSection(state, { repo });
-    const files = [['assets/chess-board.svg', renderBoard(state)]];
+    const files = [];
     if (write) files.push(['README.md', updateSection(await readFile('README.md', 'utf8'), section)]);
     await writeFiles(files);
     process.stdout.write(section);
@@ -209,7 +182,7 @@ async function main() {
     const section = renderSection(result.state, { repo });
     const readme = updateSection(await readFile('README.md', 'utf8'), section);
     await writeFiles([['game/state.json', JSON.stringify(result.state, null, 2) + '\n'],
-      ['assets/chess-board.svg', renderBoard(result.state)], ['README.md', readme]]);
+      ['README.md', readme]]);
   }
   console.log(JSON.stringify({ accepted: result.accepted, reason: result.reason,
     ...(result.accepted ? { game: result.state.game, move: result.move ?? null } : {}) }));

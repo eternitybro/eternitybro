@@ -15,8 +15,8 @@ concurrency:
 jobs:
   move:
     if: github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, 'chess:')
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
     permissions:
       contents: write
       issues: write
@@ -44,9 +44,17 @@ jobs:
           fs.appendFileSync(process.env.GITHUB_OUTPUT, `accepted=${result.accepted === true}\n`);
           fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `Chess request: ${result.accepted ? 'played' : 'not played'}. ${result.reason || ''}\n`);
           JS
+      - name: Install the 3D renderer
+        if: github.event_name == 'workflow_dispatch' || steps.move.outputs.accepted == 'true'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends blender
+      - name: Render the live position in 3D
+        if: github.event_name == 'workflow_dispatch' || steps.move.outputs.accepted == 'true'
+        run: node scripts/render-3d.mjs
       - name: Save the position
         run: |
-          git add README.md assets/chess-board.svg game/state.json
+          git add README.md assets/chess-board.png assets/chess-board.stl game/state.json
           if ! git diff --cached --quiet; then
             git config user.name 'Billi'
             git config user.email 'billi@robebot.app'

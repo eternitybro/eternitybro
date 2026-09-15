@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test scripts/chess.test.mjs",
-    "chess:render": "node scripts/chess.mjs render",
+    "chess:render": "node scripts/chess.mjs render --repo eternitybro/eternitybro --write && node scripts/render-3d.mjs",
     "chess:process": "node scripts/chess.mjs process"
   },
   "engines": {

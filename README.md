@@ -1,16 +1,14 @@
-<a href="https://www.robgungor.com/"><img src="assets/header.svg" width="960" alt="hiee, i'm Rob Gungor. creative technologist." /></a>
-
-<div align="center">
+<a href="https://www.robgungor.com/"><img src="assets/header.svg" width="960" alt="Rob Gungor. make yourself at home." /></a>
 
 i love to make things that humans enjoy. i lead [clear](https://clearsol.network/).
-
-</div>
 
 <!-- CHESS:START -->
 
 ## your move
 
-<img src="assets/chess-board.svg" width="420" alt="game 1: black to move">
+<a href="https://github.com/eternitybro/eternitybro/blob/main/assets/chess-board.stl"><img src="assets/chess-board.png?position=fc91b293d002d220707cc34b519b0639624f5e4f2b52309fe3d9e0009a97fd8e" width="960" alt="3D Man Ray-inspired chess set. game 1: black to move. Click to rotate the set."></a>
+
+[rotate the set](https://github.com/eternitybro/eternitybro/blob/main/assets/chess-board.stl)
 
 **black to move.** game 1. last move: e4.
 
@@ -34,4 +32,4 @@ Choose a move below, then submit the issue. The board updates after GitHub runs 
 
 <!-- CHESS:END -->
 
-<sub>inspired by [Tim Burgan's community chess](https://github.com/timburgan). [come say hi](https://www.robgungor.com/).</sub>
+<sub>set inspired by [Man Ray's 1920 design](https://www.metmuseum.org/art/collection/search/480922). shared chess inspired by [Tim Burgan](https://github.com/timburgan). [come say hi](https://www.robgungor.com/).</sub>

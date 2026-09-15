@@ -5,7 +5,7 @@ import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import test from 'node:test';
 import { Chess } from 'chess.js';
-import { applyMove, createState, fingerprint, renderBoard, renderSection } from './chess.mjs';
+import { applyMove, createState, fingerprint, renderSection } from './chess.mjs';
 
 const repo = 'eternitybro/eternitybro';
 const title = (state, move) => `chess:${fingerprint(state)}:${move}`;
@@ -25,9 +25,9 @@ test('starts with the standard board and all 20 legal opening moves', () => {
   assert.match(markdown, /\[Nf3\]/);
   const e4 = markdown.match(/\[e4\]\(([^)]+)\)/)[1];
   assert.match(new URL(e4).searchParams.get('body'), /^Play e4 in the shared game\./);
-  assert.match(markdown, /width="420"/);
-  assert.match(renderBoard(state), /#0d01ff/);
-  assert.match(renderBoard(state), /#f7f7f0/);
+  assert.match(markdown, /assets\/chess-board\.png/);
+  assert.ok(markdown.includes(`chess-board.png?position=${fingerprint(state)}`));
+  assert.match(markdown, /width="960"/);
 });
 
 test('applies legal moves without mutating the original state', () => {
@@ -111,12 +111,10 @@ test('CLI ignores issue bodies, preserves files for rejected moves, and makes re
   const script = resolve('scripts/chess.mjs');
   const initial = createState();
   await mkdir(join(directory, 'game'));
-  await mkdir(join(directory, 'assets'));
   await writeFile(join(directory, 'game/state.json'), JSON.stringify(initial));
-  await writeFile(join(directory, 'assets/chess-board.svg'), 'initial board');
   await writeFile(join(directory, 'README.md'), 'before\n<!-- CHESS:START -->\nold\n<!-- CHESS:END -->\nafter\n');
   const eventPath = join(directory, 'event.json');
-  const files = ['game/state.json', 'assets/chess-board.svg', 'README.md'];
+  const files = ['game/state.json', 'README.md'];
   const snapshot = () => Promise.all(files.map((path) => readFile(join(directory, path), 'utf8')));
   const processIssue = async (issue) => {
     await writeFile(eventPath, JSON.stringify({ issue }));
@@ -137,8 +135,8 @@ test('CLI ignores issue bodies, preserves files for rejected moves, and makes re
     const state = JSON.parse(accepted[0]);
     assert.equal(state.lastMove, 'e4');
     assert.equal(new Chess(state.fen).turn(), 'b');
-    assert.match(accepted[2], /^before\n<!-- CHESS:START -->/);
-    assert.match(accepted[2], /<!-- CHESS:END -->\nafter\n$/);
+    assert.match(accepted[1], /^before\n<!-- CHESS:START -->/);
+    assert.match(accepted[1], /<!-- CHESS:END -->\nafter\n$/);
     assert.equal((await processIssue(issue)).reason, 'already_applied');
     assert.deepEqual(await snapshot(), accepted);
     assert.equal((await processIssue({ id: 3, title: issue.title })).reason, 'stale_position');
