@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 448" role="img" aria-labelledby="title description">
+<title id="title">game 1: white to move</title>
+<desc id="description">rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1</desc>
+<rect width="448" height="448" fill="#f7f7f0"/>
+<text x="49" y="63" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♜</text>
+<rect x="74" y="24" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="99" y="63" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♞</text>
+<text x="149" y="63" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♝</text>
+<rect x="174" y="24" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="199" y="63" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♛</text>
+<text x="249" y="63" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♚</text>
+<rect x="274" y="24" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="299" y="63" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♝</text>
+<text x="349" y="63" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♞</text>
+<rect x="374" y="24" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="399" y="63" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♜</text>
+<text x="12" y="55" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">8</text>
+<text x="49" y="441" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">a</text>
+<rect x="24" y="74" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="49" y="113" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♟</text>
+<text x="99" y="113" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♟</text>
+<rect x="124" y="74" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="149" y="113" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♟</text>
+<text x="199" y="113" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♟</text>
+<rect x="224" y="74" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="249" y="113" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♟</text>
+<text x="299" y="113" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♟</text>
+<rect x="324" y="74" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="349" y="113" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♟</text>
+<text x="399" y="113" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♟</text>
+<text x="12" y="105" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">7</text>
+<text x="99" y="441" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">b</text>
+<rect x="74" y="124" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="174" y="124" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="274" y="124" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="374" y="124" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="12" y="155" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">6</text>
+<text x="149" y="441" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">c</text>
+<rect x="24" y="174" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="124" y="174" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="224" y="174" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="324" y="174" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="12" y="205" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">5</text>
+<text x="199" y="441" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">d</text>
+<rect x="74" y="224" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="174" y="224" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="274" y="224" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="374" y="224" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="12" y="255" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">4</text>
+<text x="249" y="441" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">e</text>
+<rect x="24" y="274" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="124" y="274" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="224" y="274" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<rect x="324" y="274" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="12" y="305" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">3</text>
+<text x="299" y="441" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">f</text>
+<text x="49" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
+<rect x="74" y="324" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="99" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
+<text x="149" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
+<rect x="174" y="324" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="199" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
+<text x="249" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
+<rect x="274" y="324" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="299" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
+<text x="349" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
+<rect x="374" y="324" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="399" y="363" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♙</text>
+<text x="12" y="355" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">2</text>
+<text x="349" y="441" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">g</text>
+<rect x="24" y="374" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="49" y="413" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♖</text>
+<text x="99" y="413" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♘</text>
+<rect x="124" y="374" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="149" y="413" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♗</text>
+<text x="199" y="413" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♕</text>
+<rect x="224" y="374" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="249" y="413" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♔</text>
+<text x="299" y="413" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♗</text>
+<rect x="324" y="374" width="50" height="50" fill="#0d01ff" opacity=".13"/>
+<text x="349" y="413" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♘</text>
+<text x="399" y="413" text-anchor="middle" font-family="DejaVu Sans, Segoe UI Symbol, Noto Sans Symbols 2, serif" font-size="44" fill="#0d01ff">♖</text>
+<text x="12" y="405" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">1</text>
+<text x="399" y="441" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d01ff">h</text>
+<rect x="24" y="24" width="400" height="400" fill="none" stroke="#0d01ff" stroke-width="1"/>
+</svg>

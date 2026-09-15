@@ -1,0 +1,16 @@
+{
+  "name": "rob-profile-chess",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test scripts/chess.test.mjs",
+    "chess:render": "node scripts/chess.mjs render",
+    "chess:process": "node scripts/chess.mjs process"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "chess.js": "1.4.0"
+  }
+}
